@@ -1,3 +1,4 @@
+import Clock from './ejercicios/ejercicio_seiones_4_5_6';
 import './App.css';
 // import TasklistComponent from './components/container/task_list';
 // import Greeting from './components/pure/greeting';
@@ -7,7 +8,7 @@ import './App.css';
 // import { Ejemplo2 } from './hooks/ejemplo2';
 // import MiComponenteContexto from './hooks/ejemplo3';
 // import { Ejemplo4 } from './hooks/ejemplo4';
-import { GreetingStyled } from './components/pure/greetingStyled';
+// import { GreetingStyled } from './components/pure/greetingStyled';
 
 function App() {
   return (
@@ -26,8 +27,9 @@ function App() {
           {/* Todo lo que hay aqui es tratado como props.children */}
           {/* <h3>Contenido de props.children</h3> */}
         {/* </Ejemplo4> */}
+        {/* <GreetingStyled name="Stiven"></GreetingStyled> */}
 
-        <GreetingStyled name="Stiven"></GreetingStyled>
+        <Clock></Clock>
       </header>
     </div>
   );
