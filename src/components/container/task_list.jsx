@@ -4,6 +4,9 @@ import { Task } from "../../models/task_class";
 import TaskComponent from "../pure/task";
 // import PropTypes from 'prop-types';
 
+// Importamos la hoja de estilos de task.scss
+import '../../styles/task.scss';
+
 const TasklistComponent = (props) => {
   const defaultTaks = new Task(
     "Example",
