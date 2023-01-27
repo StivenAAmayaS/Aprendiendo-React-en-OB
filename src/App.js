@@ -1,5 +1,5 @@
 import './App.css';
-import TasklistComponent from './components/container/task_list';
+// import TasklistComponent from './components/container/task_list';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 // import ContactListComponent from './components/container/ContactListComponent';
@@ -9,6 +9,7 @@ import TasklistComponent from './components/container/task_list';
 // import { Ejemplo4 } from './hooks/ejemplo4';
 // import { GreetingStyled } from './components/pure/greetingStyled';
 // import Clock from './ejercicios/ejercicio_seiones_4_5_6';
+import Father  from './components/container/Father';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       {/* <header className="App-header"> */}
         {/* <Greeting name="Stiven"></Greeting> */}
         {/* <GreetingF name="Stiven"/> */}
-        <TasklistComponent></TasklistComponent>
+        {/* <TasklistComponent></TasklistComponent> */}
         {/* <ContactListComponent></ContactListComponent> */}
 
         {/* Ejemplos de uso de Hooks */}
@@ -31,6 +32,9 @@ function App() {
 
         {/* <Clock></Clock> */}
       {/* </header> */}
+
+      {/* Getion de eventos */}
+      <Father></Father>
     </div>
   );
 }
