@@ -5,7 +5,7 @@ import TaskComponent from "../pure/task";
 // import PropTypes from 'prop-types';
 
 // Importamos la hoja de estilos de task.scss
-import '../../styles/task.scss';
+import "../../styles/task.scss";
 
 const TasklistComponent = (props) => {
   const defaultTaks = new Task(
@@ -35,9 +35,35 @@ const TasklistComponent = (props) => {
 
   return (
     <div>
-      <h1>Your Task:</h1>
-      {/* TODO: Aplicar un for/map para renderizar una lista  */}
-      <TaskComponent task={defaultTaks}></TaskComponent>
+      <div className="col-12">
+        <div className="card">
+          {/* card header {title} */}
+          <div className="card-header p-3">
+            <h5>Your Tasks:</h5>
+          </div>
+          {/* card-body {content} */}
+          <div
+            className="card-body"
+            data-mdb-perfect-scrollbar="true"
+            style={{ position: "relative", height: "400px" }}
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">description</th>
+                  <th scope="col">Priority</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* TODO: Iterar sobre una lista de tareas */}
+                <TaskComponent task={defaultTaks}></TaskComponent>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
