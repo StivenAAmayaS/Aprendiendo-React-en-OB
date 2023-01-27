@@ -4,6 +4,7 @@ import { Task } from "../../models/task_class";
 
 // Importamos la hoja de estilos de task.scss
 import "../../styles/task.scss";
+import { LEVELS } from "../../models/levels_enum";
 
 const TaskComponent = ({ task }) => {
   useEffect(() => {
@@ -13,6 +14,55 @@ const TaskComponent = ({ task }) => {
       console.log(`Task: ${task.name} is going to unmount`);
     };
   }, [task]);
+
+  /**
+   * function taht return a Badge
+   * depending on the level of the task
+   *  */
+
+  const taskLevelBadge = () => {
+    switch (task.level) {
+      case LEVELS.NORMAL:
+        return (
+          <h6 className="mb-0">
+            <span className="badge bg-primary">{task.level}</span>
+          </h6>
+        );
+      case LEVELS.URGENTE:
+        return (
+          <h6 className="mb-0">
+            <span className="badge bg-warning">{task.level}</span>
+          </h6>
+        );
+      case LEVELS.BLOCKING:
+        return (
+          <h6 className="mb-0">
+            <span className="badge bg-danger">{task.level}</span>
+          </h6>
+        );
+
+      default:
+        break;
+    }
+  };
+
+  const taskCompletedIcon = () => {
+    if (task.completed) {
+      return (
+        <i
+          className="bi-toggle-on"
+          style={{ color: "green", fontSize: "20px" }}
+        ></i>
+      );
+    } else {
+      return (
+        <i
+          className="bi-toggle-off"
+          style={{ color: "grey", fontSize: "20px" }}
+        ></i>
+      );
+    }
+  };
 
   return (
     <tr className="fw-normal">
@@ -24,11 +74,20 @@ const TaskComponent = ({ task }) => {
       </td>
       <td className="align-middle">
         {/* TODO: Sustituir por un badge */}
-        <span>{task.level}</span>
+        {/* Execution of functions to return badge element */}
+        {taskLevelBadge()}
+
+        {/* <span>{task.level}</span> */}
       </td>
       <td className="align-middle">
         {/* TODO: Sustituir por iconos */}
-        <span>{task.completed}</span>
+        {taskCompletedIcon()}
+        <i
+          className="bi-trash"
+          style={{ color: "tomato", fontSize: "20px" }}
+        ></i>
+
+        {/* <span>{task.completed ? "Completed" : "Pending"}</span> */}
       </td>
     </tr>
     // ---------------------------------------------------

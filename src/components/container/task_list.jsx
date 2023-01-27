@@ -6,17 +6,37 @@ import TaskComponent from "../pure/task";
 
 // Importamos la hoja de estilos de task.scss
 import "../../styles/task.scss";
+import TaskForm from "../pure/forms/taskForm";
 
 const TasklistComponent = (props) => {
-  const defaultTaks = new Task(
-    "Example",
-    "Default description",
-    false,
+  const defaultTaks1 = new Task(
+    "Example-1",
+    "Description 1",
+    true,
     LEVELS.NORMAL
   );
 
+  const defaultTaks2 = new Task(
+    "Example-2",
+    "Description 2",
+    false,
+    LEVELS.URGENTE
+  );
+
+  const defaultTaks3 = new Task(
+    "Example-3",
+    "Description 3",
+    false,
+    LEVELS.BLOCKING
+  );
+
   // Estado del componente
-  const [tasks, setTasks] = useState([defaultTaks]);
+  const [tasks, setTasks] = useState([
+    defaultTaks1,
+    defaultTaks2,
+    defaultTaks3,
+  ]);
+
   const [loading, setLoading] = useState(true);
 
   // Control del ciclo de vida del componente
@@ -57,11 +77,15 @@ const TasklistComponent = (props) => {
                 </tr>
               </thead>
               <tbody>
-                {/* TODO: Iterar sobre una lista de tareas */}
-                <TaskComponent task={defaultTaks}></TaskComponent>
+                {tasks.map((task, index) => {
+                  return (
+                    <TaskComponent key={index} task={task}></TaskComponent>
+                  );
+                })}
               </tbody>
             </table>
           </div>
+          <TaskForm></TaskForm>
         </div>
       </div>
     </div>

@@ -6,6 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 // Importante: los estilos propios deben ir debajo del bootstrap para que no los pise.
 // ----------------------------------------------------
 
+// Aqui importamos Bootstrap-icons --------------------
+import 'bootstrap-icons/font/bootstrap-icons.css'
+// ----------------------------------------------------
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
