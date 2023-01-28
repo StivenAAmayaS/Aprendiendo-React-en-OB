@@ -8,7 +8,7 @@ import TaskComponent from "../pure/task";
 import "../../styles/task.scss";
 import TaskForm from "../pure/forms/taskForm";
 
-const TasklistComponent = (props) => {
+const TasklistComponent = () => {
   const defaultTaks1 = new Task(
     "Example-1",
     "Description 1",
@@ -49,12 +49,33 @@ const TasklistComponent = (props) => {
     };
   }, [tasks]);
 
-  const changeCompleted = (id) => {
-    console.log("TODO: cambiar estado de una tarea");
-  };
+  function completedTask(task) {
+    console.log("Complete this Task:", task);
+    const index = tasks.indexOf(task);
+    const tempTasks = [...tasks];
+    tempTasks[index].completed = !tempTasks[index].completed;
+    // We update the state of the component with the new list of tasks and it will update the iteration of the task in order to show the task updated
+    setTasks(tempTasks);
+  }
+
+  function deleteTask(task) {
+    console.log("Delete this Task:", task);
+    const index = tasks.indexOf(task);
+    const tempTasks = [...tasks];
+    tempTasks.splice(index, 1);
+    setTasks(tempTasks);
+  }
+
+  function addTask(task) {
+    console.log("Delete this Task:", task);
+    const index = tasks.indexOf(task);
+    const tempTasks = [...tasks];
+    tempTasks.push(task);
+    setTasks(tempTasks);
+  }
 
   return (
-    <div>
+    <div className="d-flex flex-column justify-content-center align-items-center gap-2">
       <div className="col-12">
         <div className="card">
           {/* card header {title} */}
@@ -65,7 +86,11 @@ const TasklistComponent = (props) => {
           <div
             className="card-body"
             data-mdb-perfect-scrollbar="true"
-            style={{ position: "relative", height: "400px" }}
+            style={{
+              position: "relative",
+              height: "400px",
+              overflowY: "auto"
+            }}
           >
             <table>
               <thead>
@@ -79,15 +104,20 @@ const TasklistComponent = (props) => {
               <tbody>
                 {tasks.map((task, index) => {
                   return (
-                    <TaskComponent key={index} task={task}></TaskComponent>
+                    <TaskComponent
+                      key={index}
+                      task={task}
+                      complete={completedTask}
+                      remove={deleteTask}
+                    ></TaskComponent>
                   );
                 })}
               </tbody>
             </table>
           </div>
-          <TaskForm></TaskForm>
         </div>
       </div>
+      <TaskForm add={addTask}></TaskForm>
     </div>
   );
 };

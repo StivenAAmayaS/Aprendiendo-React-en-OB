@@ -6,7 +6,7 @@ import { Task } from "../../models/task_class";
 import "../../styles/task.scss";
 import { LEVELS } from "../../models/levels_enum";
 
-const TaskComponent = ({ task }) => {
+const TaskComponent = ({ task, complete,  remove }) => {
   useEffect(() => {
     console.log("Created Task");
 
@@ -50,14 +50,16 @@ const TaskComponent = ({ task }) => {
     if (task.completed) {
       return (
         <i
-          className="bi-toggle-on"
+          onClick={() => complete(task)}
+          className="bi-toggle-on task-action"
           style={{ color: "green", fontSize: "20px" }}
         ></i>
       );
     } else {
       return (
         <i
-          className="bi-toggle-off"
+          onClick={() => complete(task)}
+          className="bi-toggle-off task-action"
           style={{ color: "grey", fontSize: "20px" }}
         ></i>
       );
@@ -83,7 +85,8 @@ const TaskComponent = ({ task }) => {
         {/* TODO: Sustituir por iconos */}
         {taskCompletedIcon()}
         <i
-          className="bi-trash"
+          onClick={() => remove(task)}
+          className="bi-trash task-action"
           style={{ color: "tomato", fontSize: "20px" }}
         ></i>
 
@@ -101,9 +104,10 @@ const TaskComponent = ({ task }) => {
   );
 };
 
-// eslint-disable-next-line react/no-typos
-TaskComponent.PropTypes = {
-  task: PropTypes.instanceOf(Task),
+TaskComponent.propTypes = {
+  task: PropTypes.instanceOf(Task).isRequired,
+  complete: PropTypes.func.isRequired,
+  remove: PropTypes.func.isRequired,
 };
 
 export default TaskComponent;
