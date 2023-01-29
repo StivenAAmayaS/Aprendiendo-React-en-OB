@@ -79,8 +79,8 @@ const TasklistComponent = () => {
       <div className="col-12">
         <div className="card">
           {/* card header {title} */}
-          <div className="card-header p-3">
-            <h5>Your Tasks:</h5>
+          <div className="card-header p-3 d-flex">
+            <h5 className="mb-0">Your Tasks:</h5>
           </div>
           {/* card-body {content} */}
           <div

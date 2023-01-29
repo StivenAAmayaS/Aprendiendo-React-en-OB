@@ -1,13 +1,13 @@
 export class Contact {
-    first_name = '';
-    last_name = '';
+    name = '';
     email = '';
+    mobile = 0;
     isConected = false;
 
-    constructor(first_name, last_name, email, isConected) {
-        this.first_name = first_name;
-        this.last_name = last_name;
+    constructor(name, email, mobile, isConected) {
+        this.name = name;
         this.email = email;
+        this.mobile = mobile;
         this.isConected = isConected;
     }
 }
