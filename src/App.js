@@ -3,7 +3,7 @@ import TasklistComponent from './components/container/task_list';
 
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
-import ContactListComponent from './components/container/ContactListComponent';
+// import ContactListComponent from './components/container/ContactListComponent';
 // import { Ejemplo1 } from './hooks/ejemplo1';
 // import { Ejemplo2 } from './hooks/ejemplo2';
 // import MiComponenteContexto from './hooks/ejemplo3';
@@ -36,9 +36,9 @@ function App() {
       {/* <Father></Father> */}
 
       {/* Ejercicio sesiones 7, 8 y 9 */}
-      <ContactListComponent></ContactListComponent>
+      {/* <ContactListComponent></ContactListComponent> */}
 
-      {/* <TasklistComponent></TasklistComponent> */}
+      <TasklistComponent></TasklistComponent>
     </div>
   );
 }
