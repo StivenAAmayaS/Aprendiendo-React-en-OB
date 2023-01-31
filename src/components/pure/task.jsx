@@ -21,7 +21,7 @@ const TaskComponent = ({ task, complete,  remove }) => {
    * depending on the level of the task
    *  */
 
-  const lineThrough = task.completed ? "text-decoration-line-through" : "";
+  const lineThrough = task.completed ? "text-decoration-line-through opacity-50" : "";
 
   const taskLevelBadge = () => {
     switch (task.level) {
