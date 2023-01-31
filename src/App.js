@@ -11,7 +11,8 @@ import "./App.css";
 // import { GreetingStyled } from './components/pure/greetingStyled';
 // import Clock from './ejercicios/ejercicio_seiones_4_5_6';
 // import Father  from './components/container/Father';
-import OptionalRender from "./components/pure/OpcionalRender";
+// import OptionalRender from "./components/pure/OpcionalRender";
+import ExerciseConditional from "./ejercicios/ejercicio_sesiones_10_11_12";
 
 function App() {
   return (
@@ -40,7 +41,10 @@ function App() {
       {/* <ContactListComponent></ContactListComponent> */}
 
       {/* Ejemplos de renderizado condicional */}
-      <OptionalRender></OptionalRender>
+      {/* <OptionalRender></OptionalRender> */}
+
+      {/* Ejercicio sesiones 10, 11 y 12 */}
+      <ExerciseConditional></ExerciseConditional>
 
 
       {/* PROYECTO FINAL */}
