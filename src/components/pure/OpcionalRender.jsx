@@ -1,12 +1,29 @@
 import React, { useState } from "react";
 
+const styleButton = (color) => {
+  return {
+    backgroundColor: color,
+    borderRadius: "10px",
+    border: "1px solid transparent",
+    padding: "5px 25px",
+  };
+};
+
 // Login / Logout buttons
 const LoginButton = ({ loginAction }) => {
-  return <button onClick={loginAction}>Logout</button>;
+  return (
+    <button onClick={loginAction} style={styleButton("green")}>
+      Logout
+    </button>
+  );
 };
 
 const LogoutButton = ({ logoutAction }) => {
-  return <button onClick={logoutAction}>Login</button>;
+  return (
+    <button onClick={logoutAction} style={styleButton("red")}>
+      Login
+    </button>
+  );
 };
 
 // (Expresion true) && expresion => se renderiza la expresion
@@ -64,7 +81,9 @@ const OptionalRender = () => {
         <p>There are no new messages!</p>
       )}
 
-      <button onClick={addMessages}>{nMessages === 0 ? "Add your first message" : "Add new Message"}</button>
+      <button onClick={addMessages}>
+        {nMessages === 0 ? "Add your first message" : "Add new Message"}
+      </button>
     </div>
   );
 };
