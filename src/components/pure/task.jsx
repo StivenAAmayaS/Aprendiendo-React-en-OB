@@ -1,9 +1,10 @@
+// Importamos la hoja de estilos de task.scss
+import "../../styles/task.scss";
+
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Task } from "../../models/task_class";
 
-// Importamos la hoja de estilos de task.scss
-import "../../styles/task.scss";
 import { LEVELS } from "../../models/levels_enum";
 
 const TaskComponent = ({ task, complete,  remove }) => {
@@ -20,24 +21,26 @@ const TaskComponent = ({ task, complete,  remove }) => {
    * depending on the level of the task
    *  */
 
+  const lineThrough = task.completed ? "text-decoration-line-through" : "";
+
   const taskLevelBadge = () => {
     switch (task.level) {
       case LEVELS.NORMAL:
         return (
           <h6 className="mb-0">
-            <span className="badge bg-primary">{task.level}</span>
+            <span className={`badge bg-primary ${lineThrough}`}>{task.level}</span>
           </h6>
         );
       case LEVELS.URGENTE:
         return (
           <h6 className="mb-0">
-            <span className="badge bg-warning">{task.level}</span>
+            <span className={`badge bg-warning ${lineThrough}`}>{task.level}</span>
           </h6>
         );
       case LEVELS.BLOCKING:
         return (
           <h6 className="mb-0">
-            <span className="badge bg-danger">{task.level}</span>
+            <span className={`badge bg-danger ${lineThrough}`}>{task.level}</span>
           </h6>
         );
 
@@ -67,7 +70,7 @@ const TaskComponent = ({ task, complete,  remove }) => {
   };
 
   return (
-    <tr className="fw-normal">
+    <tr className={`fw-normal ${task.completed ? "task-completed" : "task-pending"}`}>
       <th>
         <span className="ms-2">{task.name}</span>
       </th>

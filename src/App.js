@@ -1,5 +1,5 @@
 import "./App.css";
-// import TasklistComponent from './components/container/task_list';
+import TasklistComponent from './components/container/task_list';
 
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
@@ -12,7 +12,7 @@ import "./App.css";
 // import Clock from './ejercicios/ejercicio_seiones_4_5_6';
 // import Father  from './components/container/Father';
 // import OptionalRender from "./components/pure/OpcionalRender";
-import ExerciseConditional from "./ejercicios/ejercicio_sesiones_10_11_12";
+// import ExerciseConditional from "./ejercicios/ejercicio_sesiones_10_11_12";
 
 function App() {
   return (
@@ -44,11 +44,11 @@ function App() {
       {/* <OptionalRender></OptionalRender> */}
 
       {/* Ejercicio sesiones 10, 11 y 12 */}
-      <ExerciseConditional></ExerciseConditional>
+      {/* <ExerciseConditional></ExerciseConditional> */}
 
 
       {/* PROYECTO FINAL */}
-      {/* <TasklistComponent></TasklistComponent> */}
+      <TasklistComponent></TasklistComponent>
     </div>
   );
 }
