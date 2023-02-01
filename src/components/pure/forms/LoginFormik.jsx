@@ -37,7 +37,7 @@ const LoginFormik = () => {
 
         {/* ------------------------------------------------------- */}
 
-        {({ touched, errors, isSubmitting, handleChange, handleBlur }) => (
+        {({ values, touched, errors, isSubmitting, handleChange, handleBlur }) => (
           <Form className="card-body d-flex flex-column align-items-start">
             <label htmlFor="email">Email:</label>
 

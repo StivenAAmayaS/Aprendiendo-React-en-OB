@@ -13,7 +13,8 @@ import TasklistComponent from './components/container/task_list';
 // import Father  from './components/container/Father';
 // import OptionalRender from "./components/pure/OpcionalRender";
 // import ExerciseConditional from "./ejercicios/ejercicio_sesiones_10_11_12";
-import LoginFormik from "./components/pure/forms/LoginFormik";
+// import LoginFormik from "./components/pure/forms/LoginFormik";
+import RegisterFormik from "./components/pure/forms/RegisterFormik";
 
 function App() {
   return (
@@ -47,7 +48,9 @@ function App() {
       {/* Ejercicio sesiones 10, 11 y 12 */}
       {/* <ExerciseConditional></ExerciseConditional> */}
 
-      <LoginFormik></LoginFormik>
+      {/* <LoginFormik></LoginFormik> */}
+
+      <RegisterFormik></RegisterFormik>
 
       {/* PROYECTO FINAL */}
       {/* <TasklistComponent></TasklistComponent> */}
