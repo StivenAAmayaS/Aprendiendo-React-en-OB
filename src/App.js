@@ -15,6 +15,7 @@ import TasklistComponent from './components/container/task_list';
 // import ExerciseConditional from "./ejercicios/ejercicio_sesiones_10_11_12";
 // import LoginFormik from "./components/pure/forms/LoginFormik";
 import RegisterFormik from "./components/pure/forms/RegisterFormik";
+import TaskFormFormik from "./components/pure/forms/TaskFormFormik";
 
 function App() {
   return (
@@ -50,7 +51,10 @@ function App() {
 
       {/* <LoginFormik></LoginFormik> */}
 
-      <RegisterFormik></RegisterFormik>
+      {/* <RegisterFormik></RegisterFormik> */}
+
+      {/* Ejercicio sesiones 13, 14 y 15 */}
+      <TaskFormFormik></TaskFormFormik>
 
       {/* PROYECTO FINAL */}
       {/* <TasklistComponent></TasklistComponent> */}
