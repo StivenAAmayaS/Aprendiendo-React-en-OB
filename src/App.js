@@ -1,5 +1,5 @@
 import "./App.css";
-import TasklistComponent from './components/container/task_list';
+// import TasklistComponent from './components/container/task_list';
 
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
@@ -14,8 +14,10 @@ import TasklistComponent from './components/container/task_list';
 // import OptionalRender from "./components/pure/OpcionalRender";
 // import ExerciseConditional from "./ejercicios/ejercicio_sesiones_10_11_12";
 // import LoginFormik from "./components/pure/forms/LoginFormik";
-import RegisterFormik from "./components/pure/forms/RegisterFormik";
-import TaskFormFormik from "./components/pure/forms/TaskFormFormik";
+// import RegisterFormik from "./components/pure/forms/RegisterFormik";
+// import TaskFormFormik from "./components/pure/forms/TaskFormFormik";
+// import AsyncExample from "./components/pure/AsyncExample";
+import ObservableExample from "./components/pure/ObservableExample";
 
 function App() {
   return (
@@ -54,7 +56,11 @@ function App() {
       {/* <RegisterFormik></RegisterFormik> */}
 
       {/* Ejercicio sesiones 13, 14 y 15 */}
-      <TaskFormFormik></TaskFormFormik>
+      {/* <TaskFormFormik></TaskFormFormik> */}
+
+      {/* 🔰 Ejemplos de procesos asincronos 🔰 */}
+      {/* <AsyncExample></AsyncExample> */}
+      <ObservableExample></ObservableExample>
 
       {/* PROYECTO FINAL */}
       {/* <TasklistComponent></TasklistComponent> */}

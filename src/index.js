@@ -11,17 +11,18 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 // ----------------------------------------------------
 
 import './index.css';
-// import App from './App';
+import App from './App';
 // import AppRoutingOne from './AppRoutingOne';
+// import AppRoutingFinal from './AppRoutingFinal';
 
 import reportWebVitals from './reportWebVitals';
-import AppRoutingFinal from './AppRoutingFinal';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppRoutingFinal></AppRoutingFinal>
+    <App></App>
+    {/* <AppRoutingFinal></AppRoutingFinal> */}
   </React.StrictMode>
 );
 
