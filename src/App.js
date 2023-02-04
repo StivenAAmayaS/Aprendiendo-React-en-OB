@@ -17,7 +17,8 @@ import "./App.css";
 // import RegisterFormik from "./components/pure/forms/RegisterFormik";
 // import TaskFormFormik from "./components/pure/forms/TaskFormFormik";
 // import AsyncExample from "./components/pure/AsyncExample";
-import ObservableExample from "./components/pure/ObservableExample";
+// import ObservableExample from "./components/pure/ObservableExample";
+import FetchExample from "./components/pure/FetchExample";
 
 function App() {
   return (
@@ -60,7 +61,10 @@ function App() {
 
       {/* 🔰 Ejemplos de procesos asincronos 🔰 */}
       {/* <AsyncExample></AsyncExample> */}
-      <ObservableExample></ObservableExample>
+      {/* <ObservableExample></ObservableExample> */}
+
+      {/* Trabajando con peticiones http con Fetch */}
+      <FetchExample></FetchExample>
 
       {/* PROYECTO FINAL */}
       {/* <TasklistComponent></TasklistComponent> */}
