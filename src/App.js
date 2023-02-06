@@ -20,7 +20,8 @@ import "./App.css";
 // import ObservableExample from "./components/pure/ObservableExample";
 // import FetchExample from "./components/pure/FetchExample";
 // import AxiosExample from "./components/pure/AxiosExample";
-import Exercise21 from "./components/pure/Exercise21";
+// import Exercise21 from "./components/pure/Exercise21";
+import CardContainer from "./components/pure/SolucExercise21";
 
 function App() {
   return (
@@ -71,7 +72,8 @@ function App() {
       {/* Axios Example */}
       {/* <AxiosExample></AxiosExample> */}
 
-      <Exercise21></Exercise21>
+      {/* <Exercise21></Exercise21> */}
+      <CardContainer></CardContainer>
 
       {/* PROYECTO FINAL */}
       {/* <TasklistComponent></TasklistComponent> */}
