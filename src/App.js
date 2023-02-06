@@ -1,5 +1,4 @@
 import "./App.css";
-import AxiosExample from "./components/pure/AxiosExample";
 // import TasklistComponent from './components/container/task_list';
 
 // import Greeting from './components/pure/greeting';
@@ -19,7 +18,9 @@ import AxiosExample from "./components/pure/AxiosExample";
 // import TaskFormFormik from "./components/pure/forms/TaskFormFormik";
 // import AsyncExample from "./components/pure/AsyncExample";
 // import ObservableExample from "./components/pure/ObservableExample";
-import FetchExample from "./components/pure/FetchExample";
+// import FetchExample from "./components/pure/FetchExample";
+// import AxiosExample from "./components/pure/AxiosExample";
+import Exercise21 from "./components/pure/Exercise21";
 
 function App() {
   return (
@@ -68,7 +69,9 @@ function App() {
       {/* <FetchExample></FetchExample> */}
 
       {/* Axios Example */}
-      <AxiosExample></AxiosExample>
+      {/* <AxiosExample></AxiosExample> */}
+
+      <Exercise21></Exercise21>
 
       {/* PROYECTO FINAL */}
       {/* <TasklistComponent></TasklistComponent> */}
