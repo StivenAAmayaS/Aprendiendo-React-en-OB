@@ -1,4 +1,5 @@
 import "./App.css";
+import AxiosExample from "./components/pure/AxiosExample";
 // import TasklistComponent from './components/container/task_list';
 
 // import Greeting from './components/pure/greeting';
@@ -64,7 +65,10 @@ function App() {
       {/* <ObservableExample></ObservableExample> */}
 
       {/* Trabajando con peticiones http con Fetch */}
-      <FetchExample></FetchExample>
+      {/* <FetchExample></FetchExample> */}
+
+      {/* Axios Example */}
+      <AxiosExample></AxiosExample>
 
       {/* PROYECTO FINAL */}
       {/* <TasklistComponent></TasklistComponent> */}
