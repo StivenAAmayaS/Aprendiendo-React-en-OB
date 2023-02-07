@@ -1,6 +1,6 @@
 import APIRequest from "../utils/config/axios.config";
 
-function getRandomUser() {
+export function getRandomUser() {
   return APIRequest.get("/", {
     // https://randomuser.me/api/
     validateStatus: function (status) {
@@ -8,5 +8,3 @@ function getRandomUser() {
     },
   });
 }
-
-export default getRandomUser;

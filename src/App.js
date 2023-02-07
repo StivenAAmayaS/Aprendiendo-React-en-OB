@@ -21,7 +21,8 @@ import "./App.css";
 // import FetchExample from "./components/pure/FetchExample";
 // import AxiosExample from "./components/pure/AxiosExample";
 // import Exercise21 from "./components/pure/Exercise21";
-import CardContainer from "./components/pure/SolucExercise21";
+// import CardContainer from "./components/pure/SolucExercise21";
+import AxiosCRUDExample from "./components/pure/AxiosCRUDExample";
 
 function App() {
   return (
@@ -73,7 +74,9 @@ function App() {
       {/* <AxiosExample></AxiosExample> */}
 
       {/* <Exercise21></Exercise21> */}
-      <CardContainer></CardContainer>
+      {/* <CardContainer></CardContainer> */}
+
+      <AxiosCRUDExample></AxiosCRUDExample>
 
       {/* PROYECTO FINAL */}
       {/* <TasklistComponent></TasklistComponent> */}
