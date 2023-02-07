@@ -199,21 +199,32 @@ const AxiosCRUDExample = () => {
         )}
       </Formik>
       {/* Example buttons to test API responses */}
-      <div>
-        <button onClick={obtainAllUsers}>Get All Users with Axios</button>
-        <button onClick={() => obtainAllPagedUsers(1)}>
+      <div className="card-footer">
+        <button onClick={obtainAllUsers} className="btn btn-info m-1">
+          Get All Users with Axios
+        </button>
+        <button
+          onClick={() => obtainAllPagedUsers(1)}
+          className="btn btn-primary m-1"
+        >
           Get All User (Page 1) with Axios
         </button>
-        <button onClick={() => obtainUserById(1)}>Get User 1</button>
-        <button onClick={() => createNewUser("morpheus", "leader")}>
+        <button onClick={() => obtainUserById(1)} className="btn btn-secondary m-1">
+          Get User 1
+        </button>
+        <button
+          onClick={() => createNewUser("morpheus", "leader")}
+          className="btn btn-success m-1"
+        >
           Create User
         </button>
-        <button onClick={() => updateUser(1, "morpheus", "developer")}>
+        <button
+          onClick={() => updateUser(1, "morpheus", "developer")}
+          className="btn btn-warning m-1"
+        >
           Update User
         </button>
-        <button onClick={() => deleteUser(1)}>
-          Delete User
-        </button>
+        <button onClick={() => deleteUser(1)} className="btn btn-danger m-1">Delete User</button>
       </div>
     </div>
   );
